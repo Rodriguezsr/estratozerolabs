@@ -1,0 +1,12 @@
+@media (max-width:1024px) { .navbar{padding:15px 20px;} .glow-text{font-size:3rem;} .cards{gap:20px;} }
+@media (max-width:768px){
+  .navbar{flex-direction:column;align-items:center;}
+  .cards{flex-direction:column;align-items:center;}
+  .card{width:90%;}
+  .btn{width:80%;}
+}
+@media (max-width:480px){
+  .glow-text{font-size:2rem;}
+  .hero{padding-top:120px;}
+  .section-title{font-size:2rem;}
+}
