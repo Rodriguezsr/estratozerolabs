@@ -9,7 +9,7 @@
   width:100%;
   height:100%;
   z-index:-1;
-  pointer-events: none;
+  pointer-events: none; /* 🔥 necesario para clicks */
 }
 
 /* BODY */
@@ -18,7 +18,6 @@ body {
   background:black;
   overflow-x:hidden;
   scroll-behavior: smooth;
-  padding-top:70px; /* 🔥 evita que navbar tape contenido */
 }
 
 /* NAVBAR */
@@ -28,16 +27,10 @@ body {
   width:100%;
   display:flex;
   justify-content:space-between;
-  align-items:center;
   padding:15px 40px;
   backdrop-filter: blur(10px);
   background: rgba(0,0,0,0.4);
   z-index:1000;
-}
-
-.navbar nav {
-  display:flex;
-  align-items:center;
 }
 
 .navbar a {
@@ -51,13 +44,12 @@ body {
 
 /* HERO */
 .hero {
-  min-height:100vh;
+  height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:20px;
 }
 
 /* TITULO GLOW */
@@ -69,8 +61,31 @@ body {
   color:transparent;
   text-shadow:0 0 10px #00ffff, 0 0 20px #ff00ff;
   animation: glow 2s ease-in-out infinite alternate;
+  text-align:center;
 }
 
 @keyframes glow { 
   0%{text-shadow:0 0 10px #00ffff,0 0 20px #ff00ff;} 
-  100%{text-shadow:0 0 20px #
+  100%{text-shadow:0 0 20px #ff00ff,0 0 30px #00ffff;} 
+}
+
+/* TYPING */
+.typing {
+  margin-top:15px;
+  border-right:2px solid #00ffff;
+  white-space:nowrap;
+  overflow:hidden;
+  width:0;
+  animation: typing 3s steps(40,end) forwards, blink 0.7s infinite;
+  text-align:center;
+}
+
+@keyframes typing { to{ width: 380px; } }
+@keyframes blink { 50%{ border-color: transparent; } }
+
+/* BUTTONS */
+.btn {
+  margin-top:25px;
+  padding:15px 35px;
+  border:none;
+  border
