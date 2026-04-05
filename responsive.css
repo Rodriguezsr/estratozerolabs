@@ -1,4 +1,3 @@
-/* 📱 MÓVILES */
 @media (max-width: 768px) {
 
   /* NAVBAR */
@@ -9,31 +8,38 @@
   }
 
   .navbar nav {
-    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .navbar a {
-    display: inline-block;
-    margin: 5px 10px;
-    font-size: 14px;
+    margin: 5px 8px;
+    font-size: 13px;
+    color: white;
   }
 
   /* HERO */
+  .hero {
+    height: auto;
+    padding: 120px 20px 60px;
+  }
+
   .glow-text {
-    font-size: 2rem; /* antes 4rem */
+    font-size: 2.2rem;
   }
 
   .typing {
     width: auto;
     font-size: 14px;
     border-right: none;
-    animation: none; /* quita efecto que rompe en móvil */
+    animation: none;
   }
 
   /* BOTÓN */
   .btn {
-    padding: 10px 20px;
     font-size: 14px;
+    padding: 10px 20px;
   }
 
   /* CARDS */
