@@ -9,11 +9,17 @@
   width:100%;
   height:100%;
   z-index:-1;
-  pointer-events: none; /* 🔥 ARREGLA LOS CLICKS */
+  pointer-events: none;
 }
 
 /* BODY */
-body { color:white; background:black; overflow-x:hidden; scroll-behavior: smooth; }
+body {
+  color:white;
+  background:black;
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+  padding-top:70px; /* 🔥 evita que navbar tape contenido */
+}
 
 /* NAVBAR */
 .navbar {
@@ -22,7 +28,49 @@ body { color:white; background:black; overflow-x:hidden; scroll-behavior: smooth
   width:100%;
   display:flex;
   justify-content:space-between;
+  align-items:center;
   padding:15px 40px;
   backdrop-filter: blur(10px);
   background: rgba(0,0,0,0.4);
   z-index:1000;
+}
+
+.navbar nav {
+  display:flex;
+  align-items:center;
+}
+
+.navbar a {
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.navbar a:hover { color:#00ffff; }
+
+/* HERO */
+.hero {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+/* TITULO GLOW */
+.glow-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size:4rem;
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  -webkit-background-clip:text;
+  color:transparent;
+  text-shadow:0 0 10px #00ffff, 0 0 20px #ff00ff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow { 
+  0%{text-shadow:0 0 10px #00ffff,0 0 20px #ff00ff;} 
+  100%{text-shadow:0 0 20px #
