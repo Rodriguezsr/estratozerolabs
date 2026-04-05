@@ -114,3 +114,69 @@ body {
   }
 
 }
+/* ===================== */
+/* 📱 MOBILE FIX REAL */
+/* ===================== */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .navbar nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar a {
+    margin: 5px 10px;
+    font-size: 14px;
+    color: white;
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+
+  .glow-text {
+    font-size: 2.2rem;
+  }
+
+  .typing {
+    font-size: 14px;
+    border-right: none;
+    animation: none;
+    width: auto;
+  }
+
+  /* BOTÓN */
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  /* CARDS */
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  /* TITULOS */
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+}
