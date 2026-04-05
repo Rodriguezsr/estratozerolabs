@@ -9,7 +9,7 @@
   width:100%;
   height:100%;
   z-index:-1;
-  pointer-events: none; /* 🔥 necesario para clicks */
+  pointer-events: none;
 }
 
 /* BODY */
@@ -37,10 +37,7 @@ body {
   color:white;
   margin-left:20px;
   text-decoration:none;
-  transition:0.3s;
 }
-
-.navbar a:hover { color:#00ffff; }
 
 /* HERO */
 .hero {
@@ -50,42 +47,70 @@ body {
   justify-content:center;
   align-items:center;
   text-align:center;
+  padding:20px;
 }
 
-/* TITULO GLOW */
+/* TITULO */
 .glow-text {
-  font-family: 'Orbitron', sans-serif;
   font-size:4rem;
-  background: linear-gradient(90deg, #00ffff, #ff00ff);
-  -webkit-background-clip:text;
-  color:transparent;
-  text-shadow:0 0 10px #00ffff, 0 0 20px #ff00ff;
-  animation: glow 2s ease-in-out infinite alternate;
-  text-align:center;
+  color:#00ffff;
 }
 
-@keyframes glow { 
-  0%{text-shadow:0 0 10px #00ffff,0 0 20px #ff00ff;} 
-  100%{text-shadow:0 0 20px #ff00ff,0 0 30px #00ffff;} 
-}
-
-/* TYPING */
+/* TEXTO */
 .typing {
   margin-top:15px;
-  border-right:2px solid #00ffff;
-  white-space:nowrap;
-  overflow:hidden;
-  width:0;
-  animation: typing 3s steps(40,end) forwards, blink 0.7s infinite;
-  text-align:center;
 }
 
-@keyframes typing { to{ width: 380px; } }
-@keyframes blink { 50%{ border-color: transparent; } }
-
-/* BUTTONS */
+/* BOTÓN */
 .btn {
   margin-top:25px;
   padding:15px 35px;
-  border:none;
-  border
+  border-radius:30px;
+  background:#00ffff;
+  color:black;
+  display:inline-block;
+  text-decoration:none;
+}
+
+/* CARDS */
+.cards {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card {
+  width:280px;
+  padding:25px;
+  border-radius:20px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* MOBILE SIMPLE */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .hero {
+    height:auto;
+    padding-top:120px;
+  }
+
+  .glow-text {
+    font-size:2rem;
+  }
+
+  .cards {
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .card {
+    width:90%;
+  }
+
+}
