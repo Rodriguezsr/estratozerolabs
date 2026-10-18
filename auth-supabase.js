@@ -94,3 +94,46 @@ window.iniciarSesion = iniciarSesion;
 window.recuperarContrasena = recuperarContrasena;
 window.cambiarContrasena = cambiarContrasena;
 
+// Compatibilidad con los formularios existentes de LoginETZ.html
+window.handleSignupSubmit = async function (event) {
+  event.preventDefault();
+
+  const nombre = document.getElementById("signup-firstname")?.value.trim();
+  const apellido = document.getElementById("signup-lastname")?.value.trim();
+  const email = document.getElementById("signup-email")?.value.trim();
+  const password = document.getElementById("signup-password")?.value;
+
+  if (!nombre || !apellido || !email || !password) {
+    alert("Completa todos los campos.");
+    return;
+  }
+
+  await registrarUsuario(nombre, apellido, email, password);
+};
+
+window.handleLoginSubmit = async function (event) {
+  event.preventDefault();
+
+  const email = document.getElementById("login-email")?.value.trim();
+  const password = document.getElementById("login-password")?.value;
+
+  if (!email || !password) {
+    alert("Escribe tu correo y contraseña.");
+    return;
+  }
+
+  await iniciarSesion(email, password);
+};
+
+window.handleForgotSubmit = async function (event) {
+  event.preventDefault();
+
+  const email = document.getElementById("forgot-email")?.value.trim();
+
+  if (!email) {
+    alert("Escribe tu correo electrónico.");
+    return;
+  }
+
+  await recuperarContrasena(email);
+};
