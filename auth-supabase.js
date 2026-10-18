@@ -1,7 +1,7 @@
 
 /* Estrato Zero Labs - Supabase Auth */
 
-const SUPABASE_URL = "https://defrfpzalpjnuzwdensm.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://defrfpzalpjnuzwdensm.supabase.co";
 const SUPABASE_KEY = "sb_publishable_c-2om_sWEIYxKApUwy6BBQ_xg3WtFVV";
 
 const supabaseClient = window.supabase.createClient(
